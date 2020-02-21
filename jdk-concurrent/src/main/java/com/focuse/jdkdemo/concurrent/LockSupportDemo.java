@@ -3,7 +3,7 @@ package com.focuse.jdkdemo.concurrent;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * @author ：zhangfei
+ * @author ：focuse
  * @date ：Created in 2020/2/16 上午11:10
  * @description：
  * @modified By：
@@ -207,7 +207,7 @@ public class LockSupportDemo {
     }
 
     public static void main(String[] args) {
-        System.out.println("testPark2");
+        System.out.println("**************");
         LockSupportDemo.testPark1();
 
         //睡6s保证 下面test不影响前面的test输出
@@ -217,7 +217,7 @@ public class LockSupportDemo {
             System.out.println("main interrupted");
         }
 
-        System.out.println("testPark2");
+        System.out.println("**************");
         LockSupportDemo.testPark2();
 
         //睡6s保证 下面test不影响前面的test输出
@@ -227,7 +227,7 @@ public class LockSupportDemo {
             System.out.println("main interrupted");
         }
 
-        System.out.println("testParkNanos");
+        System.out.println("**************");
         LockSupportDemo.testParkNanos();
 
         //睡6s保证 下面test不影响前面的test输出
@@ -237,7 +237,7 @@ public class LockSupportDemo {
             System.out.println("main interrupted");
         }
 
-        System.out.println("testParkUtil");
+        System.out.println("**************");
         LockSupportDemo.testParkUtil();
     }
 }
